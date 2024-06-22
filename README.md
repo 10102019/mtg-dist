@@ -92,15 +92,18 @@ docker ps -a
 
 4a92deedc64c
 
-五：停止这个镜像ID进程：
+五：停止这个镜像ID进程：（从stop后面开始的这串字符就是镜像ID）
+```
+/usr/bin/docker-current stop 4a92deedc64c
+```
+（例如：前面3e9843539a2742f99b04d313316fa9cba3a66927255d7f2d64a7a2c0a6a26d）
 
-/usr/bin/docker-current stop 4a92deedc64c（从stop后面开始的这串字符就是镜像ID）
-
-六：删除这个进程：
+六：删除这个进程：（从rm后面开始的这串字符就是镜像ID）
 ```
 /usr/bin/docker-current rm 4a92deedc64c
 ```
-（从rm后面开始的这串字符就是镜像ID：例如：89f2135ce3f3aa546a844a39816f9f6e8c7ae0b8c25c6d69c2b0b600aaa636）
+（例如：89f2135ce3f3aa546a844a39816f9f6e8c7ae0b8c25c6d69c2b0b600aaa636后面）
+
 七：创建指定的 secret（打印镜像ID）、tag（设置版本号）、 domain（设置伪装域名，比如百度）：
 ```
 secret=$(head -c 16 /dev/urandom | xxd -ps) tag="随便取一个，最好是数字" domain="伪装的域名不需要https://或者http://⁠" docker run --name nginx-mtproxy -d -e tag="$tag" -e secret="$secret" -e domain="$domain" -p 80:80 -p 443:443 180121/nginx-mtproxy:v1
