@@ -102,7 +102,7 @@ docker ps -a
 ```
 /usr/bin/docker-current rm 4a92deedc64c
 ```
-（例如：89f2135ce3f3aa546a844a39816f9f6e8c7ae0b8c25c6d69c2b0b600aaa636后面）
+（例如：89f2135ce3f3aa546a844a39816f9f6e8c7ae0b8c25c6d69c2b0b600aaa636后面，或者：d24fb038a831caffeb36e······················555f1748b4c984d43d712fbd4319130af***9522451（中间-3））
 
 七：创建指定的 secret（打印镜像ID）、tag（设置版本号）、 domain（设置伪装域名，比如百度）：
 ```
